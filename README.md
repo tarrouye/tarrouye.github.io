@@ -1,2 +1,2 @@
-# tarrouye.github.io
+# Théo Arrouye Portfolio Website
 My personal portfolio website.
