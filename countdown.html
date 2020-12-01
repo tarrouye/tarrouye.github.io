@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <title>Countdown</title>
+  
+  
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+      
+      <!-- Custom styles for this template -->
+      <link href="portfolio/cover.css?ver=1.2.3" rel="stylesheet">
+  </head>
+  
+  <body class="text-center">
+    
+      <div class="bgd-img-astro d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Théo Arrouye</h3>
+        </div>
+      </header>
+  
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading" id="countdown">Countdown</h1>
+        <h1 id="mongus_cod"></h1>
+        <br/>
+        <br/>
+        <h3 id="countdown_date">Date</h3>
+        <br/>
+        <br/>
+       	<p class="lead">
+          <button id="discord_btn" onclick="alert('Downloading...\nDownloading...\nERROR! Critical Security Failure.\nPlease reinstall Windows.');" class="btn btn-lg btn-secondary">This is a button</button>
+        </p>
+      </main>
+  
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Find me on <a href="https://github.com/tarrouye">GitHub</a>, <a href="https://www.linkedin.com/in/tarrouye/">LinkedIn</a> or <a href="https://twitter.com/theotacobell">Twitter</a>.</p>
+        </div>
+      </footer>
+    </div>
+    </div>
+  </body>
+
+
+  <script>
+    // Set date/time to count down to in UTC
+    var amongUsDate = new Date(Date.UTC(2020, 9, 4, 2, 30))
+    var countDownDate = amongUsDate.getTime();
+
+    var mongus_code = "EBBXPQ";
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+      // get current date/time
+      var now = new Date().getTime();
+
+      // get difference between times
+      var difference = countDownDate - now;
+
+      // Calculate time from difference
+      var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      // Display the result in the countdown element
+      var cdstring = "";
+      if (days > 0)
+      	cdstring += (days + "d ");
+      
+      if (hours > 0)
+      	cdstring += (hours + "h ");
+      
+      if (minutes > 0)
+      	cdstring += (minutes + "m ");
+      
+      cdstring += (seconds + "s until Among Us"); 
+      
+      document.getElementById("countdown").innerHTML = cdstring;
+
+      document.getElementById("countdown_date").innerHTML = "Among Us will be played at: <br/>" + amongUsDate.toLocaleString() + " (Local Time)";
+
+      // if count is finished, say so
+      if (difference < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "AMONG US TIME IS UPON US";
+      }
+    }, 1000);
+    
+    // fun buttons
+    var items = [ "Download more RAM" ];
+    var item = items[Math.floor(Math.random() * items.length)];
+    
+    document.getElementById("discord_btn").innerHTML = item; 
+    
+    //document.getElementById("mongus_cod").innerHTML = "Code: " + mongus_code;
+    </script>
+</html>
