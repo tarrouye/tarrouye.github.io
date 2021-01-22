@@ -15,7 +15,7 @@ a:hover {
 .btn-secondary:focus {
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  background-color: #f44560;
+  background-color: #1e7069;/*#f44560;*/
   border: .125rem solid #000;
   border-radius: 2rem;
 }
