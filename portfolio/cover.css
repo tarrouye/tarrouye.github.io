@@ -41,6 +41,26 @@ a:hover {
     overflow: auto;
 }
 
+.bgd-blk {
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+}
+
+.bgd-white {
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+}
+
 /*
  * Base structure
  */
@@ -61,6 +81,10 @@ body {
 
 .cover-container {
   max-width: 75em;
+}
+
+.cover-container-wide {
+  max-width: 90em;
 }
 
 
