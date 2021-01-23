@@ -23,6 +23,9 @@ a:focus {
 
 .rounded-card {
   border-radius: 2rem;
+  line-height: 2.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* Custom default button */
