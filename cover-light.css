@@ -28,6 +28,13 @@ a:focus {
   -webkit-box-decoration-break: clone;
 }
 
+.rounded-card-2x {
+  border-radius: 4rem;
+  line-height: 2.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -126,6 +133,46 @@ a:focus {
     overflow: auto;
 }
 
+.bgd-wild-apple {
+  background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+}
+
+.bgd-soft-grass {
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+}
+
+.bgd-soft-purple {
+  background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+}
+
+.bgd-soft-steel {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+}
+
 .bgd-blk {
   background-color: black;
   -webkit-background-size: cover;
@@ -167,6 +214,20 @@ a:focus {
 .my-card-blur-no-hover:hover {
   -webkit-backdrop-filter: brightness(50%) blur(3px);
   backdrop-filter: brightness(50%) blur(3px);
+}
+
+/* override carousel controls to be dark */
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-caption {
+    top: 0;
+    bottom: auto;
 }
 
 /*
