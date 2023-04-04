@@ -167,4 +167,4 @@ function bodyLoaded() {
   createSliderElements();
 }
 
-setTheme(localStorage.getItem("mv-theme") ?? 0);
+setTheme(Number(localStorage.getItem("mv-theme") ?? "0"));
