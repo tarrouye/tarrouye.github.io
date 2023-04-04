@@ -23,6 +23,7 @@ function setTheme(index) {
   root.style.setProperty('--scheme-warning-color', theme['warning'] ?? '#990000');
 
   currentTheme = index;
+  localStorage.setItem("mv-theme", currentTheme);
 }
 
 function isValidHttpUrl(string) {
@@ -166,4 +167,4 @@ function bodyLoaded() {
   createSliderElements();
 }
 
-setTheme(0);
+setTheme(localStorage.getItem("mv-theme") ?? 0);
