@@ -17,6 +17,8 @@
     font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
     background-color: var(--scheme-color-1);
     color: var(--scheme-color-2);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
   }
   
   a {
