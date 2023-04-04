@@ -16,11 +16,13 @@ function cycleTheme() {
 }
 
 function setTheme(index) {
+  index = Number(index);
   const theme = themes[index];
   const root = document.querySelector(':root');
   root.style.setProperty('--scheme-color-1', theme['main']);
   root.style.setProperty('--scheme-color-2', theme['sub']);
   root.style.setProperty('--scheme-warning-color', theme['warning'] ?? '#990000');
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', theme['main']);
 
   currentTheme = index;
   localStorage.setItem("mv-theme", currentTheme);
