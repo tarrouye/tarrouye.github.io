@@ -1,0 +1,126 @@
+:root {
+    --scheme-color-1: #ffffff;
+    --scheme-color-2: #000000;
+    --scheme-focus_highlight: #9ecaed;
+    --scheme-warning-color: #ff0000;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
+    background-color: var(--scheme-color-1);
+    color: var(--scheme-color-2);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+  }
+  
+  a {
+    color: var(--scheme-color-2);
+  }
+  
+  .bgd-wrapper {
+    padding: 0;
+    margin: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bgd-wrapper .content {
+    padding: 1em;
+    max-width: 90%;
+  }
+
+  /* header */
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* card */
+  
+  .card {
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-color: var(--scheme-color-2);
+    color: var(--scheme-color-1);
+    text-align: center;
+  }
+  
+  .card a {
+    color: var(--scheme-color-1);
+  }
+  
+  .card p {
+    font-size: 0.8rem;
+  }
+  
+  /* footer */
+  
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .app-ui {
+    width: 95%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .app-icon {
+    width: 40px;
+    height: auto;
+    border-radius: 100px;
+    margin-right: 10px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  /* iphone safe area */
+  @supports (padding: max(0px)) {
+    .bgd-wrapper .content {
+      padding-left: max(1em, env(safe-area-inset-left)) !important;
+      padding-right: max(1em, env(safe-area-inset-right)) !important;
+    }
+  }
+  
