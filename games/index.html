@@ -1,39 +1,37 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#9dd97c">
+	<meta name="theme-color" content="#F5F5F7">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="games_main.css">
-
-
+	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="games_main.css?v=3.0.1">
 	<title>Games</title>
 	<script src="processing-1.4.8-min.js"></script>
-	
 </head>
-
 <body onload="onActiv()">
 
-	<div class="navbar" style="height: 50px">
-	  
-	  <a href="../"><img src="fb_profile_pic.jpeg" class="avatar" align="left"></a>
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html#card-games">&larr; Back to Portfolio</a></li>
+    </ul>
+  </nav>
 
-	  <div class="dropdown">
-	    <button class="dropbtn">Web Games
-	      <i class="fa fa-caret-down"></i>
-	    </button>
-	    <div class="dropdown-content" id='webDropdown'>
-	    	</p>Placeholder</p>
-	    </div>
-	  </div>
-	</div>
-	
-	<h3>Welcome!</h3>
-	<p>Web game instructions have not been ported from the old site. Sorry! Most of the controls are intuitive (e.g. arrow keys to move). Most games can also be operated entirely with the mouse.</p>
-	<p>Select from one of the web games in the navbar :)</p>
+  <section style="padding-top: 8rem; padding-bottom: 2rem;">
+    <div class="games-container">
+        <h1 id="gameTitle" style="font-size:3rem; margin-bottom:0.5rem;">Welcome!</h1>
+        <p id="gameInstructions" class="subtitle" style="font-size:1.1rem; max-width:600px; margin:0 auto 2rem auto;">Select a game from the list below.</p>
+        
+        <div id="games-list" class="games-list" style="margin-bottom: 3rem;"></div>
+        
+        <div id="canvas-container">
+            <canvas id="pjs_canv"></canvas>
+        </div>
 
-	<script src='main.js?v=1.0.5'></script>
-	
+        <p class="subtitle" style="font-size:1.1rem; max-width:600px; margin:0 auto 2rem auto;">Source for some of the games is <a href="https://github.com/tarrouye/CTG-Games-Archive">available on Github</a>.</p>
+    </div>
+  </section>
+
+	<script src='main.js?v=3.0.2'></script>
 </body>
-
 </html>

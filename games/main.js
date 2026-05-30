@@ -1,14 +1,22 @@
-var web_names = ["mirror-draw", "number-rush", "ladderman", "snake", "piano-tiles", "takuzu", "super-tic-tac-toe", "five-doors", "gradient-puzzle"];
-var ios_names = ["Fysuzzles", "Clumsy Boxing", "Clumsy Surfing", "30 Balls"];
-var ios_urls = ["https://apps.apple.com/us/app/fysuzzles/id977471507", "https://apps.apple.com/us/app/clumsy-boxing/id950897022", "https://apps.apple.com/us/app/clumsy-surfing/id1207489768", "https://apps.apple.com/us/app/30-balls/id891167202"];
+var web_names = ["mirror-draw", "number-rush", "ladderman", "snake", "piano-tiles", "takuzu", "super-tic-tac-toe", "gradient-puzzle", "five-doors"];
 
-var canvas_ref = document.createElement('canvas');
-canvas_ref.setAttribute("id", "pjs_canv");
-document.body.appendChild(canvas_ref);
+const instructions = {
+  "mirror-draw": "Use the mouse to draw on the canvas.",
+  "number-rush": "Click the numbers in ascending order as fast as you can before time runs out.",
+  "ladderman": "Use the A and D keys to move and climb ladders while avoiding hazards.",
+  "snake": "Use WASD or arrow keys to steer the snake to collect food and grow.",
+  "piano-tiles": "Hit the black tiles as they scroll down the screen. Don't miss! Keybinds: ASDF or ASKL from left to right, or click/tap the tiles.",
+  "takuzu": "Click tiles to change their color. No more than two adjacent same-colored tiles allowed.",
+  "super-tic-tac-toe": "Click squares to place your mark. Win the mini boards to conquer the main board.",
+  "five-doors": "Use the arrow keys to reach the correct portal.",
+  "gradient-puzzle": "Swap tiles to form a smooth color gradient across the board."
+};
 
+var canvas_ref;
 
 function onActiv() {
-	populateDropdowns();
+    canvas_ref = document.getElementById("pjs_canv");
+	populateGamesList();
 	checkUrlParam();
 }
 
@@ -23,14 +31,9 @@ function checkUrlParam() {
 			}
 			i++;
 		}
-		
-		/*
-		for (let name of ios_names) {
-			console.log(name + ' ' + params[1]);
-		}*/
 	}
 	
-	loadSketch(0);
+	loadSketch(0); // Defaults to mirror-draw
 }
 
 function humanizeFileName(str) {
@@ -43,25 +46,29 @@ function humanizeFileName(str) {
 	return output.substring(0, output.length - 1);
 }
 
-function populateDropdowns() {
-	var wHTML = '', iHTML = '';
+function populateGamesList() {
+	var wHTML = '';
 	
 	web_names.forEach(function(name, i) {
-		wHTML += ("<p onclick='loadSketch(" + i + ")'>" + humanizeFileName(name) + "</p>");
+		wHTML += ("<button class='game-btn' onclick='loadSketch(" + i + ")'>" + humanizeFileName(name) + "</button>");
 	});
 	
-	ios_names.forEach(function(name, i) {
-		iHTML += ("<p onclick='loadiOS(" + i + ")'>" + name + "</p>");
-	});
-	
-	document.getElementById('webDropdown').innerHTML = wHTML;
-	document.getElementById('iosDropdown').innerHTML = iHTML;
+	document.getElementById('games-list').innerHTML = wHTML;
 }
 
 function loadSketch(x) {
 	unloadSketch();
 	
-	Processing.loadSketchFromSources(canvas_ref, new Array(web_names[x] + '.pde'));
+    var name = web_names[x];
+    document.getElementById("gameTitle").innerText = humanizeFileName(name);
+    document.getElementById("gameInstructions").innerText = instructions[name];
+    window.location.hash = name;
+    
+    var btns = document.querySelectorAll('.game-btn');
+    btns.forEach(function(btn) { btn.classList.remove('active'); });
+    if (btns[x]) { btns[x].classList.add('active'); }
+
+	Processing.loadSketchFromSources(canvas_ref, new Array(name + '.pde'));
 }
 
 function unloadSketch() {
@@ -69,8 +76,4 @@ function unloadSketch() {
 	if (typeof pjs != "undefined") {
 		pjs.exit();
 	}
-}
-
-function loadiOS(x) {
-	window.open(ios_urls[x], "_self");
 }

@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Surfboard</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#ffffff">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5F5F7">
+  <title>Surfboard - iOS</title>
+  <link rel="stylesheet" href="../../index.css">
+  <style>
+    .surfboard-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+      text-align: center;
+      gap: 3rem;
+    }
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .app-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid var(--border-color);
+    }
+    .app-ui {
+      max-width: 100%;
+      width: 100%;
+      max-width: 700px;
+      border: none;
+      box-shadow: none;
+      transition: transform 0.4s ease;
+    }
+    .app-ui:hover {
+      transform: translateY(-8px);
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <ul>
+      <li><a href="../../index.html#card-surfboard">&larr; Back to Portfolio</a></li>
+    </ul>
+  </nav>
 
-    <link rel="stylesheet" href="styles.css" />
-    <script src="themes.js"></script>
-  </head>
-  <body onload="bodyLoaded()">
-    <div class="bgd-wrapper">
-      <div class="content">
-        
-        <div class="header">
-          <a href="../">Back</a>
-          <a href="#" id="themeButton">Cycle Theme</a>
-        </div>
-
-        <div class="card">
-          <div class="row">
-            <img src="assets/icon.png" alt="App Icon" class="app-icon">
-            <h1>Surfboard</h1>
-          </div>
-
-          <img src="assets/ui.png" alt="App UI" class="app-ui">
-           
-          <p>Browse Tildes in style</p>
-        </div>
-
-        <footer>
-          <span>Built with 💜</span>
-          <span>© 2023 Théo Arrouye</span>
-        </footer>
-        
-      </div>
+  <main class="container surfboard-container">
+    <div class="app-header">
+      <img src="assets/icon.png" alt="Surfboard Icon" class="app-icon">
+      <h1 style="margin-bottom:0;">Surfboard</h1>
     </div>
-  </body>
+    
+    <p class="subtitle" style="margin-top:-1.5rem;">Browse Tildes in style.</p>
+
+    <img src="assets/ui.png" alt="App UI" class="app-ui">
+  </main>
+
+  <footer>
+    <p>Built with 💜<br/>© 2023 Théo Arrouye</p>
+  </footer>
+
+</body>
 </html>
