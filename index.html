@@ -7,20 +7,21 @@
   <meta name="description" content="Théo Arrouye's Portfolio - Software Engineer">
   <title>Théo Arrouye</title>
   
-  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- Floating Navbar -->
   <nav class="navbar">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#apple-platforms">iOS/macOS</a></li>
-      <li><a href="#games">Games</a></li>
-      <li><a href="#mixed-reality">Mixed Reality</a></li>
-      <li><a href="#career">Career</a></li>
-      <li><a href="#more">More</a></li>
+      <li class="nav-indicator" aria-hidden="true"></li>
+      <li><a href="#home"><i class="fa-solid fa-house nav-icon"></i><span class="nav-text">Home</span></a></li>
+      <li><a href="#apple-platforms"><i class="fa-solid fa-mobile-screen nav-icon"></i><span class="nav-text">iOS/macOS</span></a></li>
+      <li><a href="#games"><i class="fa-solid fa-gamepad nav-icon"></i><span class="nav-text">Games</span></a></li>
+      <li><a href="#mixed-reality"><i class="fa-solid fa-glasses nav-icon"></i><span class="nav-text">Mixed Reality</span></a></li>
+      <li><a href="#career"><i class="fa-solid fa-briefcase nav-icon"></i><span class="nav-text">Career</span></a></li>
+      <li><a href="#more"><i class="fa-solid fa-table-cells nav-icon"></i><span class="nav-text">More</span></a></li>
     </ul>
   </nav>
 
@@ -306,5 +307,47 @@
     <p>Built with 💜</p>
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".navbar a");
+
+      function updateNavbar() {
+        // find current section
+        let current = sections[0].getAttribute("id");
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const padding = 80;
+          if (scrollY >= sectionTop - padding) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+          current = sections[sections.length - 1].getAttribute("id");
+        }
+
+        let activeLink = null;
+        navLinks.forEach((a) => {
+          a.classList.remove("active");
+          if (current && a.getAttribute("href") === `#${current}`) {
+            a.classList.add("active");
+            activeLink = a;
+          }
+        });
+        
+        const indicator = document.querySelector(".nav-indicator");
+        if (activeLink && indicator) {
+          indicator.style.width = `${activeLink.offsetWidth}px`;
+          indicator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
+          indicator.style.opacity = '1';
+        }
+      }
+
+      window.addEventListener("scroll", updateNavbar);
+      window.addEventListener("resize", updateNavbar);
+      updateNavbar(); // Run once on load
+    });
+  </script>
 </body>
 </html>

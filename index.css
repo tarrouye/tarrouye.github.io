@@ -41,42 +41,89 @@ a:hover {
 /* Floating Navbar */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--nav-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
-  padding: 0.75rem 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: max-content;
+  max-width: 95%;
 }
 
 .navbar ul {
+  position: relative;
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 0.25rem;
+}
+
+.nav-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--text-primary);
+  border-radius: 999px;
+  z-index: 1;
+  transition: transform 0.25s ease-in-out, width 0.25s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .navbar a {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 0.5rem 1.25rem;
   color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 500;
-  transition: opacity 0.2s;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
-.navbar a:hover {
-  opacity: 0.7;
+.navbar a:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width: 768px) {
+.navbar a.active {
+  color: #fff;
+  background-color: transparent;
+}
+
+.nav-icon {
+  display: none !important;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 650px) {
+  .nav-text {
+    display: none !important;
+  }
+  .nav-icon {
+    display: inline-block !important;
+  }
   .navbar ul {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.15rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .navbar ul::-webkit-scrollbar {
+    display: none;
   }
 }
 
