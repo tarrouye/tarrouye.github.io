@@ -6,48 +6,7 @@
   <meta name="theme-color" content="#F5F5F7">
   <title>PWNY - iOS</title>
   <link rel="stylesheet" href="../../index.css">
-  <style>
-    .screenshot-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      margin-top: 4rem;
-    }
-    .screenshot-card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 1.5rem;
-      box-shadow: var(--card-shadow);
-      border: 1px solid var(--border-color);
-      text-align: center;
-    }
-    .screenshot-card img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
-    }
-    .screenshot-card h4 {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-    .features-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-      justify-content: center;
-    }
-    .features-list ul {
-      text-align: left;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      font-size: 1.05rem;
-      max-width: 400px;
-      list-style-position: inside;
-    }
-  </style>
+
 </head>
 <body>
 
@@ -66,6 +25,11 @@
         With PWNY, you can easily find out if one of your passwords or usernames has leaked in a known data breach. Early knowledge is crucial to quickly locking your accounts back down and mitigating damage potential.
       </p>
 
+      <div class="social-links" style="margin-top: 3rem;">
+        <a href="https://testflight.apple.com/join/ygm1ir0i" target="_blank" class="primary-btn">Available on Testflight</a>
+        <a href="https://github.com/tarrouye/Pwny" target="_blank">Source on Github</a>
+      </div>
+
       <div class="features-list">
         <ul>
           <li>Check an e-mail or username against the database of breaches</li>
@@ -79,51 +43,46 @@
           <li>Native dark mode support</li>
         </ul>
       </div>
-
-      <div class="social-links" style="margin-top: 3rem;">
-        <a href="https://testflight.apple.com/join/ygm1ir0i" target="_blank" class="primary-btn">Available on Testflight</a>
-        <a href="https://github.com/tarrouye/Pwny" target="_blank">Source on Github</a>
-      </div>
     </div>
   </section>
 
   <section style="padding-top: 0;">
     <div class="container">
-      <div class="screenshot-grid">
+      <div class="gallery">
         
-        <div class="screenshot-card">
+        <figure>
           <img src="assets/main_screen.png" alt="Home Screen">
-          <h4>Home Screen</h4>
-        </div>
-        <div class="screenshot-card">
+          <figcaption>Home Screen</figcaption>
+        </figure>
+        <figure>
           <img src="assets/main_expanded_1.png" alt="Account Check Flow">
-          <h4>Account Check Flow</h4>
-        </div>
-        <div class="screenshot-card">
+          <figcaption>Account Check Flow</figcaption>
+        </figure>
+        <figure>
           <img src="assets/main_expanded_2.png" alt="Password Check Flow">
-          <h4>Password Check Flow</h4>
-        </div>
-        <div class="screenshot-card">
+          <figcaption>Password Check Flow</figcaption>
+        </figure>
+        <figure>
           <img src="assets/all_breaches.png" alt="All Breaches View">
-          <h4>All Breaches View</h4>
-        </div>
+          <figcaption>All Breaches View</figcaption>
+        </figure>
 
-        <div class="screenshot-card">
+        <figure>
           <img src="assets/breach_check_results.png" alt="Breach Scan Results">
-          <h4>Breach Scan Results</h4>
-        </div>
-        <div class="screenshot-card">
+          <figcaption>Breach Scan Results</figcaption>
+        </figure>
+        <figure>
           <img src="assets/paste_check_result.png" alt="Paste Scan Results">
-          <h4>Paste Scan Results</h4>
-        </div>
-        <div class="screenshot-card">
+          <figcaption>Paste Scan Results</figcaption>
+        </figure>
+        <figure>
           <img src="assets/password_check_result.png" alt="Password Scan Results">
-          <h4>Password Scan Results</h4>
-        </div>
-        <div class="screenshot-card">
+          <figcaption>Password Scan Results</figcaption>
+        </figure>
+        <figure>
           <img src="assets/breach_details.png" alt="Breach Detail View">
-          <h4>Breach Detail View</h4>
-        </div>
+          <figcaption>Breach Detail View</figcaption>
+        </figure>
 
       </div>
     </div>

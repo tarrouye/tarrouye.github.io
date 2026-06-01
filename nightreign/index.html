@@ -6,27 +6,7 @@
   <meta name="theme-color" content="#F5F5F7">
   <title>Nightreign Timer - iOS</title>
   <link rel="stylesheet" href="../index.css" />
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 3rem;
-      padding: 0 1.5rem 6rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 24px;
-      box-shadow: var(--card-shadow);
-      border: 1px solid var(--border-color);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .gallery img:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--card-shadow-hover);
-    }
-  </style>
+
 </head>
 <body>
 
@@ -40,17 +20,27 @@
     <div class="container">
       <h1>Nightreign Timer</h1>
       <p class="subtitle">A simple, elegant timer companion for Elden Ring Nightreign.</p>
-      <div style="margin-top:2.5rem;">
-        <a href="https://apps.apple.com/us/app/nightreign-timer/id6746954525" target="_blank" class="btn primary-btn" style="padding: 0.8rem 1.5rem;">Download on the App Store</a>
+      <div class="social-links" style="margin-top:2.5rem;">
+        <a href="https://apps.apple.com/us/app/nightreign-timer/id6746954525" target="_blank" class="primary-btn" style="padding: 0.8rem 1.5rem;">Download on the App Store</a>
       </div>
     </div>
   </header>
 
-  <div class="gallery">
-    <img src="screenshot1.png" alt="Screenshot 1" />
-    <img src="screenshot2.png" alt="Screenshot 2" />
-    <img src="screenshot3.png" alt="Screenshot 3" />
-  </div>
+  <section style="padding-top: 0; padding-bottom: 6rem;">
+    <div class="container">
+      <div class="gallery">
+        <figure>
+          <img src="screenshot1.png" alt="Screenshot 1" />
+        </figure>
+        <figure>
+          <img src="screenshot2.png" alt="Screenshot 2" />
+        </figure>
+        <figure>
+          <img src="screenshot3.png" alt="Screenshot 3" />
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>Built with 💜<br/><a href="privacy.html" style="color:var(--text-secondary);">Privacy Policy</a></p>
