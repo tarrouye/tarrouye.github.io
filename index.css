@@ -101,8 +101,10 @@ a:hover {
   white-space: nowrap;
 }
 
-.navbar a:hover:not(.active) {
-  background-color: rgba(0, 0, 0, 0.05);
+@media (hover: hover) and (pointer: fine) {
+  .navbar a:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 }
 
 .navbar a.active {
@@ -116,11 +118,15 @@ a:hover {
 }
 
 @media (max-width: 650px) {
+  .navbar a {
+    padding: clamp(0.2rem, 3.5vw, 0.5rem) clamp(0.75rem, 3.5vw, 1.25rem);
+  }
   .nav-text {
     display: none !important;
   }
   .nav-icon {
     display: inline-block !important;
+    font-size: clamp(0.66rem, 4vw, 1.1rem);
   }
   .navbar ul {
     gap: 0.15rem;
