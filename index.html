@@ -8,6 +8,7 @@
   <title>Théo Arrouye</title>
   
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="stylesheet" href="index.css">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -52,7 +53,7 @@
         <!-- Vapor -->
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img class="project-image img-contain" src="ios/vapor_framed_hero.webp" alt="Vapor App">
+            <img class="project-image img-contain" src="ios/vapor_framed_hero_small.webp" alt="Vapor App">
           </div>
           <div class="project-content">
             <h3>Vapor</h3>
@@ -63,7 +64,7 @@
         <!-- Cover Buddy (Clickable Card) -->
         <a id="card-coverbuddy" href="ios/coverbuddy/index.html" class="project-card">
           <div class="project-image-wrapper">
-            <img class="project-image img-contain" src="portfolio/assets/cover_buddy_hero.webp" alt="Cover Buddy">
+            <img class="project-image img-contain" src="portfolio/assets/cover_buddy_hero_small.webp" alt="Cover Buddy">
           </div>
           <div class="project-content">
             <h3>Cover Buddy</h3>
@@ -75,7 +76,7 @@
         <!-- Surfboard (Clickable Card) -->
         <a id="card-surfboard" href="ios/surfboard/index.html" class="project-card">
           <div class="project-image-wrapper">
-            <img loading="lazy" class="project-image img-contain" src="ios/surfboard/assets/ui.webp" alt="Surfboard">
+            <img loading="lazy" class="project-image img-contain" src="ios/surfboard/assets/ui_small.webp" alt="Surfboard">
           </div>
           <div class="project-content">
             <h3>Surfboard</h3>
@@ -86,8 +87,8 @@
 
         <!-- Nightreign Timer (Clickable Card) -->
         <a id="card-nightreign" href="nightreign/index.html" class="project-card">
-          <div class="project-image-wrapper" style="background:#0F1115;">
-            <img loading="lazy" class="project-image img-contain" src="portfolio/assets/nightreign_timer_hero.webp" alt="Nightreign Timer">
+          <div class="project-image-wrapper">
+            <img loading="lazy" class="project-image img-contain" src="portfolio/assets/nightreign_timer_hero_small.webp" alt="Nightreign Timer">
           </div>
           <div class="project-content">
             <h3>Nightreign Timer</h3>
@@ -99,7 +100,7 @@
         <!-- Honeybee -->
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img loading="lazy" class="project-image img-contain" src="ios/honeybee_framed_hero.webp" alt="Honeybee Fitness">
+            <img loading="lazy" class="project-image img-contain" src="ios/honeybee_framed_hero_small.webp" alt="Honeybee Fitness">
           </div>
           <div class="project-content">
             <h3>Honeybee</h3>
@@ -110,7 +111,7 @@
         <!-- Universal Markup (Clickable Card) -->
         <a href="https://github.com/tarrouye/Universal-Markup" target="_blank" class="project-card">
           <div class="project-image-wrapper">
-            <img loading="lazy" class="project-image" src="portfolio/assets/universalmarkup0.webp" alt="Universal Markup">
+            <img loading="lazy" class="project-image" src="portfolio/assets/universalmarkup0_small.webp" alt="Universal Markup">
           </div>
           <div class="project-content">
             <h3>Universal Markup</h3>
@@ -184,7 +185,7 @@
         <!-- Web Games (Clickable Card) -->
         <a id="card-games" href="games/index.html" class="project-card">
           <div class="project-image-wrapper">
-            <img loading="lazy" class="project-image img-contain" src="portfolio/assets/puzzle_hero.webp" alt="Games">
+            <img loading="lazy" class="project-image img-contain" src="portfolio/assets/puzzle_hero_small.webp" alt="Games">
           </div>
           <div class="project-content">
             <h3>Web Games Collection</h3>
@@ -233,7 +234,7 @@
         <!-- Model Viewer Demo (Clickable Card) -->
         <a id="card-modelviewer" href="mixedreality/modelviewer/index.html" class="project-card">
           <div class="project-image-wrapper">
-            <img loading="lazy" class="project-image img-contain" src="mixedreality/assets/model-viewer.webp" alt="Model Viewer">
+            <img loading="lazy" class="project-image img-contain" src="mixedreality/assets/model-viewer_small.webp" alt="Model Viewer">
           </div>
           <div class="project-content">
             <h3>Model Viewer Demo</h3>
@@ -256,10 +257,10 @@
         <p style="max-width:700px; margin: 1rem auto 0 auto; color: var(--text-secondary);">Led the iOS engineering team and developed asset pipelines to build a highly interactive, AR-driven social platform bridging the physical and digital worlds for collectors and creators.</p>
         
         <div class="career-grid">
-          <img loading="lazy" src="assets/flickplay/1.webp" alt="Flickplay Screen 1">
-          <img loading="lazy" src="assets/flickplay/2.webp" alt="Flickplay Screen 2">
-          <img loading="lazy" src="assets/flickplay/3.webp" alt="Flickplay Screen 3">
-          <img loading="lazy" src="assets/flickplay/4.webp" alt="Flickplay Screen 4">
+          <img loading="lazy" src="assets/flickplay/1_small.webp" alt="Flickplay Screen 1">
+          <img loading="lazy" src="assets/flickplay/2_small.webp" alt="Flickplay Screen 2">
+          <img loading="lazy" src="assets/flickplay/3_small.webp" alt="Flickplay Screen 3">
+          <img loading="lazy" src="assets/flickplay/4_small.webp" alt="Flickplay Screen 4">
         </div>
         <div style="margin-top: 2.5rem; text-align:center;">
           <span class="card-link-text" style="font-size: 1.1rem; display:inline-block;">View on App Store &rarr;</span>
@@ -316,42 +317,95 @@
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll(".navbar a");
+      const indicator = document.querySelector(".nav-indicator");
+
+      let sectionData = [];
+      let bodyHeight = 0;
+      let currentSectionId = null;
+
+      function setIndicator(activeLink) {
+        if (!activeLink || !indicator) return;
+        indicator.style.width = `${activeLink.offsetWidth}px`;
+        indicator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
+        indicator.style.opacity = '1';
+      }
+
+      function calculateOffsets() {
+        sectionData = Array.from(sections).map(section => ({
+          id: section.getAttribute("id"),
+          top: section.offsetTop
+        }));
+        bodyHeight = document.body.offsetHeight;
+        
+        // Force update on resize/load
+        currentSectionId = null;
+        updateNavbar();
+      }
 
       function updateNavbar() {
-        // find current section
-        let current = sections[0].getAttribute("id");
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
+        if (sectionData.length === 0) return;
+        let current = sectionData[0].id;
+        const scrollY = window.scrollY;
+        
+        sectionData.forEach((section) => {
           const padding = 80;
-          if (scrollY >= sectionTop - padding) {
-            current = section.getAttribute("id");
+          if (scrollY >= section.top - padding) {
+            current = section.id;
           }
         });
 
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
-          current = sections[sections.length - 1].getAttribute("id");
+        if ((window.innerHeight + scrollY) >= bodyHeight - 10) {
+          current = sectionData[sectionData.length - 1].id;
         }
+
+        // Only update DOM if the active section actually changed!
+        if (current === currentSectionId) return;
+        currentSectionId = current;
 
         let activeLink = null;
         navLinks.forEach((a) => {
           a.classList.remove("active");
-          if (current && a.getAttribute("href") === `#${current}`) {
+          if (a.getAttribute("href") === `#${current}`) {
             a.classList.add("active");
             activeLink = a;
           }
         });
         
-        const indicator = document.querySelector(".nav-indicator");
-        if (activeLink && indicator) {
-          indicator.style.width = `${activeLink.offsetWidth}px`;
-          indicator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
-          indicator.style.opacity = '1';
-        }
+        setIndicator(activeLink);
       }
 
-      window.addEventListener("scroll", updateNavbar);
-      window.addEventListener("resize", updateNavbar);
-      updateNavbar(); // Run once on load
+      // Throttle scroll events and only do math, no DOM queries
+      let scrollTicking = false;
+      window.addEventListener("scroll", () => {
+        if (!scrollTicking) {
+          window.requestAnimationFrame(() => {
+            updateNavbar();
+            scrollTicking = false;
+          });
+          scrollTicking = true;
+        }
+      });
+
+      // Recalculate offsets on resize
+      let resizeTicking = false;
+      window.addEventListener("resize", () => {
+        if (!resizeTicking) {
+          window.requestAnimationFrame(() => {
+            calculateOffsets();
+            resizeTicking = false;
+          });
+          resizeTicking = true;
+        }
+      });
+
+      // Wait for custom fonts to load to fix the initial layout glitch on mobile
+      if (document.fonts) {
+        document.fonts.ready.then(calculateOffsets);
+      } else {
+        window.addEventListener("load", calculateOffsets);
+      }
+      
+      calculateOffsets();
     });
   </script>
 </body>
