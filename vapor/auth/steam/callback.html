@@ -25,9 +25,6 @@
         // Extract Steam OpenID response parameters from the callback
         let params = getQueryParams();
 
-        // Debugging: Log the extracted parameters (optional)
-        console.log("OpenID Parameters:", params);
-
         // Assuming 'openid.claimed_id' contains the SteamID, we parse it
         let steamID = null;
         if (params["openid.claimed_id"]) {
@@ -36,13 +33,14 @@
             steamID = claimedID.split("/").pop();
         }
 
-        // If SteamID was successfully extracted, redirect to custom URL scheme
-        if (steamID) {
-            let appUrl = `vapor://auth/steam?steamid=${steamID}`;
+        let state = params["state"];
+
+        // If SteamID and state were successfully extracted, redirect to the app.
+        if (steamID && state) {
+            let appUrl = `vapor://auth/steam?steamid=${encodeURIComponent(steamID)}&state=${encodeURIComponent(state)}`;
             window.location.href = appUrl;
         } else {
-            // If no SteamID found, show an error message
-            document.body.innerHTML = "<h1>Error: Unable to extract SteamID from the OpenID response.</h1>";
+            document.body.innerHTML = "<h1>Error: Unable to validate the Steam authentication response.</h1>";
         }
     </script>
 </body>
