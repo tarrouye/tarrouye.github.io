@@ -87,6 +87,22 @@
   border-radius: 0;
 }
 
+.libby-island-gallery {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 630px;
+  margin: 2rem auto 0;
+  gap: 2rem;
+}
+
+.libby-island-gallery img {
+  height: auto;
+  flex: none;
+}
+
+.libby-island-gallery figcaption {
+  margin-top: 0.75rem;
+}
+
 @media (max-width: 767px) {
   .libby-hero-layout {
     grid-template-columns: 1fr;
@@ -113,11 +129,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .libby-gallery img {
+  .libby-gallery img,
+  .libby-island-gallery img {
     transition: none;
   }
 
-  .libby-gallery img:hover {
+  .libby-gallery img:hover,
+  .libby-island-gallery img:hover {
     transform: none;
   }
 }

@@ -1,0 +1,6 @@
+Generated with the built-in imagegen tool.
+Inputs: library_grid.PNG, game_details_completed.PNG, profile.PNG from ~/Downloads/Vapor Screenshots/framed/.
+Outputs: hero.webp and hero_small.webp (WebP exports of the generated image).
+
+Prompt:
+Use case: compositing. Create a clean portfolio card hero image from these three supplied framed Vapor iPhone screenshots. Input 1: library grid, left. Input 2: Cyberpunk 2077 completed game details, center foreground. Input 3: profile statistics, right. Arrange three upright front-facing phones, center slightly larger and higher, sides slightly behind with minimal overlap; all entire phone frames visible. Wide 3:2 composition with tight balanced margins, soft near-white #FAFAFC background matching a portfolio card. Preserve the exact supplied screenshot content, text, colors, aspect ratios, device frames and UI faithfully; no redesigned screens, no invented content, no added headings, labels, logos or decorations. Soft subtle shadows. This is an arrangement of the original screenshot images, with only scale and position changes.
