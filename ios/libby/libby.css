@@ -1,0 +1,123 @@
+.libby-hero {
+  padding-bottom: 5rem;
+}
+
+.libby-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.libby-intro {
+  text-align: left;
+}
+
+.libby-intro h1 {
+  font-size: clamp(3.5rem, 7vw, 5rem);
+}
+
+.libby-intro .subtitle {
+  margin: 0 0 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.libby-description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.libby-video {
+  width: min(100%, 330px);
+  margin: 0 auto;
+}
+
+.libby-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* The screenshot's alpha channel matches the phone frame in the video. */
+  -webkit-mask-image: url("assets/queue_framed.webp");
+  mask-image: url("assets/queue_framed.webp");
+  mask-mode: alpha;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.libby-video figcaption {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.libby-section {
+  padding: 5rem 0;
+  scroll-margin-top: 5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.libby-section h2 {
+  margin-bottom: 1rem;
+}
+
+.libby-section .subtitle {
+  text-align: center;
+  max-width: 700px;
+}
+
+.libby-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+  max-width: 960px;
+  margin: 3rem auto 0;
+}
+
+.libby-gallery-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 640px;
+}
+
+.libby-gallery img {
+  height: auto;
+  flex: none;
+  border-radius: 0;
+}
+
+@media (max-width: 767px) {
+  .libby-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .libby-intro {
+    text-align: center;
+  }
+
+  .libby-section {
+    padding: 3.5rem 0;
+  }
+
+  .libby-section h2 {
+    font-size: 2rem;
+  }
+
+  .libby-gallery {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+    gap: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .libby-gallery img {
+    transition: none;
+  }
+
+  .libby-gallery img:hover {
+    transform: none;
+  }
+}
